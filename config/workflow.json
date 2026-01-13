@@ -1,0 +1,25 @@
+{
+  "settings": {
+    "mode": "parallel",
+    "response_timeout": 8.0,
+    "min_responses": 2,
+    "response_strategy": "concat"
+  },
+  "identity_protection": {
+    "enabled": true,
+    "rules": [
+      {
+        "pattern": "(?i)(as an? (AI|artificial intelligence|language model))",
+        "action": "remove"
+      },
+      {
+        "pattern": "(?i)(I('m| am) (an? )?(AI|assistant|chatbot|bot))",
+        "action": "remove"
+      },
+      {
+        "pattern": "(?i)(I (don't|do not|can't|cannot) (have|experience|feel))",
+        "action": "remove"
+      }
+    ]
+  }
+}
