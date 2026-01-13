@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  table-for-three:
+    build: .
+    container_name: table-for-three-ai
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_MODERATION_KEY=${OPENAI_MODERATION_KEY}
+    volumes:
+      - ./logs:/app/logs
+      - ./config:/app/config
+      - ./static:/app/static
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
