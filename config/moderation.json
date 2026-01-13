@@ -1,0 +1,1 @@
+{"premoderation":{"enabled":true,"api":"openai_moderation","threshold":0.7,"block_keywords":["spam","malware"]},"postmoderation":{"enabled":true,"api":"openai_moderation","threshold":0.8,"replace_text":"[Blocked]"},"pii_redaction":{"enabled":true,"patterns":[{"type":"email","action":"mask"},{"type":"phone","action":"mask"}]}}
