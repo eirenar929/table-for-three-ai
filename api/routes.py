@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 from typing import List, Dict
 import json
 from models import (
-    Conversation Mode,
+    ConversationMode,
     Participant,
     ParticipantRole,
     ConversationState
